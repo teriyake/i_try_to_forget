@@ -16,7 +16,7 @@ const startInjectingMemories = () => {
 
             if (activeMemories.length >= MAX_ACTIVE_MEMORIES) return;
 
-            if (Math.random() < 0.4) {
+            if (Math.random() < 0.9) {
                 chrome.runtime.sendMessage(
                     { action: 'getMemory' },
                     (response) => {

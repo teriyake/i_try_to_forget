@@ -3,7 +3,7 @@
     "name": "i try to forget",
     "version": "1.0.0",
     "description": "Trying to forget",
-    "permissions": ["activeTab", "storage", "scripting", "alarms"],
+    "permissions": ["storage", "scripting", "alarms"],
     "host_permissions": ["<all_urls>"],
     "background": { "service_worker": "background.js" },
     "content_scripts": [
