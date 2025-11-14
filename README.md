@@ -46,7 +46,7 @@ To manage your memories or adjust settings, click the extension icon in your bro
 
 Clicking on any memory in the list will open a modal showing the complete content of that memory, as well as a deletion button for that individual memory fragment.
 
-![screenshot of pop-up goes here]()
+![screenshot of pop-up goes here](https://raw.githubusercontent.com/teriyake/i_try_to_forget/main/demos/Screenshot%202025-11-13%20at%2020.26.18%20copy%202.png)
 
 To erase a memory that appears on a page, position your cursor over the fragment and drag across the content. You will see the parts you drag over gradually become transparent. Continue dragging until enough of the memory has been erased, at which point it will fade out completely. If you prefer not to interact with a memory, it will automatically disappear after sixty seconds.
 
