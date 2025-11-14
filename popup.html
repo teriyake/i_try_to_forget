@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Controls</title>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>i try to forget</h1>
+                <div class="toggle-container">
+                    <label for="enabledToggle">Inject Memories</label>
+                    <label class="switch">
+                        <input type="checkbox" id="enabledToggle" />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="memories-section">
+                <h2>Stored Memories (<span id="memoryCount">0</span>)</h2>
+                <ul id="memoryList"></ul>
+                <button id="clearButton">Clear All Memories</button>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

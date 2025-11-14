@@ -1,0 +1,16 @@
+@keyframes memoryPulse {
+    0%,
+    100% {
+        opacity: var(--memory-opacity, 0.7);
+    }
+    50% {
+        opacity: calc(var(--memory-opacity, 0.7) * 0.6);
+    }
+}
+
+.memory-container {
+    cursor:
+        url('cursor_eraser_32x32.svg')
+            1 1,
+        auto;
+}

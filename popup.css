@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #e8e9ed 0%, #d5d7dc 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, sans-serif;
+    color: #3a3a4a;
+    width: 350px;
+    min-height: 400px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed rgba(58, 58, 74, 0.25);
+}
+
+.header h1 {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: #2a2a3a;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.toggle-container label:first-child {
+    font-size: 14px;
+    color: #4a4a5a;
+    font-weight: 400;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b5b7c0;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(58, 58, 74, 0.15);
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .slider {
+    background-color: #7a8ca8;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 26px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch:hover .slider {
+    background-color: #a0a2ad;
+}
+
+.switch:hover input:checked + .slider {
+    background-color: #6b7c96;
+}
+
+.memories-section {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.memories-section h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3a3a4a;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+}
+
+#memoryCount {
+    color: #7a8ca8;
+    font-weight: 600;
+}
+
+#memoryList {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    padding-right: 8px;
+}
+
+#memoryList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#memoryList::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+#memoryList::-webkit-scrollbar-thumb {
+    background: rgba(122, 140, 168, 0.4);
+    border-radius: 3px;
+}
+
+#memoryList::-webkit-scrollbar-thumb:hover {
+    background: rgba(122, 140, 168, 0.6);
+}
+
+#memoryList li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    font-size: 13px;
+    color: #4a4a5a;
+    line-height: 1.5;
+    border: 1px solid rgba(58, 58, 74, 0.1);
+    transition: all 0.2s ease;
+}
+
+#memoryList li:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+#memoryList li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#clearButton {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #8a8c98 0%, #7a7c88 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#clearButton:hover {
+    background: linear-gradient(135deg, #7a7c88 0%, #6a6c78 100%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+#clearButton:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px 20px;
+    color: #8a8a9a;
+    font-size: 13px;
+    font-style: italic;
+}
+
+#memoryList li {
+    cursor: pointer;
+}
+
+#memoryList li:hover {
+    color: rgba(230, 230, 230, 0.8);
+}
+
+#memoryList li:hover:after {
+    content: 'view full';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #7a8ca8;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.memory-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.memory-content img {
+    max-height: 20px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.delete-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #998b8d 0%, #938386 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #938386 0%, #8e7c7f 100%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 80%;
+    padding: 24px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: auto;
+    border: 1px solid rgba(58, 58, 74, 0.15);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(122, 140, 168, 0.4);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(122, 140, 168, 0.6);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(58, 58, 74, 0.25);
+}
+
+.modal-header h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a4a5a;
+    letter-spacing: 0.3px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #8a8a9a;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: rgba(122, 140, 168, 0.1);
+    color: #4a4a5a;
+}
+
+.modal-close:active {
+    background: rgba(122, 140, 168, 0.2);
+}
+
+.modal-body {
+    color: #3a3a4a;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.modal-body.text-memory {
+    font-size: 14px;
+    padding: 16px;
+    background: rgba(232, 233, 237, 0.3);
+    border-radius: 6px;
+    border: 1px dashed rgba(58, 58, 74, 0.3);
+    line-height: 1.7;
+}
+
+.modal-body.image-memory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(20, 20, 40, 0.05);
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.modal-body.image-memory img {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
