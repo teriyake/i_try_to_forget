@@ -35,7 +35,7 @@ The Safari version of this extension has been built using Xcode and the Safari W
 4. Click on the "Extensions" tab, and you should see "i try to forget" listed among the available extensions.
 5. Enable it by checking the box next to the extension name.
 
-When you first install the extension, you will see an onboarding page that explains what the extension does and asks for your consent regarding data collection (all data collected is local and required for the functionalities; please refer to the privacy policy for more details). After you consent, the extension begins operating in the background as you browse. You do not need to interact with it explicitly—it will automatically collect and display memories as you navigate the web.
+When you first install the extension, you will see an onboarding page that explains what the extension does and asks for your consent regarding data collection (all data collected is local and required for the functionalities; please refer to the [privacy policy](https://github.com/teriyake/i_try_to_forget/blob/9b45020e991b83ef26c85f10f643e2130b92b9e0/PRIVACY_POLICY.md) for more details). After you consent, the extension begins operating in the background as you browse. You do not need to interact with it explicitly—it will automatically collect and display memories as you navigate the web.
 
 To manage your memories or adjust settings, click the extension icon in your browser toolbar. This opens a pop-up UI, where you can:
 
