@@ -1,5 +1,5 @@
 # i try to forget
-![screenshot goes here]("https://raw.githubusercontent.com/teriyake/i_try_to_forget/main/demos/Screenshot%202025-11-13%20at%2020.26.18%20copy%203.png")
+![screenshot goes here](https://raw.githubusercontent.com/teriyake/i_try_to_forget/main/demos/Screenshot%202025-11-13%20at%2020.26.18%20copy%203.png)
 
 A browser extension that transforms forgetting into labor, memory into matter.
 
