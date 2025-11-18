@@ -19,7 +19,9 @@ The second process is manifestation. As you browse, the extension periodically c
 The third process is erasure. When you position your cursor over a memory fragment, you enter erasure mode. As you drag your cursor across the fragment, the extension tracks your cursor's path and progressively makes those specific pixels transparent. The erasure works like using a physical eraser on paper, where only the parts you drag across actually disappear. A canvas-based rendering system enables this pixel-level control. The memory keeps track of how much of its surface area has been erased, and once you have wiped away approximately 80% of the fragment, the entire memory fades out and is removed from the page.
 
 ## Installation and Usage
-To install the extension for personal use or development, you need to load it as an unpacked extension in Chrome:
+You can download a packaged version of the extension from Chrome Web Store [here](https://chromewebstore.google.com/detail/i-try-to-forget/nlgdfadpdhomlmflhccjemmpdgfdblci)
+
+To install the extension for development, you need to load it as an unpacked extension in Chrome:
 
 1. Download or clone this repository to your local machine. 
 2. Open Chrome and navigate to the extensions management page by typing chrome://extensions in the address bar. 
